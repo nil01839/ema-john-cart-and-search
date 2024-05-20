@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import './Shops.css'
+import './Shop.css'
 import Products from '../Products/Products';
 import Cart from '../Cart/Cart';
 import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 
-const Shops = () => {
+const Shop = () => {
     const [products, setProducts] = useState([]);//Jehetu data gulo array of objects akare ache, tai initial value hocche empty array
     const [cart, setCart] = useState([]);
     
@@ -75,4 +75,4 @@ const Shops = () => {
     );
 };
 
-export default Shops;
+export default Shop;
