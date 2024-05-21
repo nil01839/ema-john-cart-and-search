@@ -2,7 +2,7 @@ import React from 'react';
 import './Cart.css'
 
 const Cart = ({cart}) => {
-    console.log(cart);
+    //console.log(cart);
     //const {cart} = props //direct destructure na kore evabe o kora jay. se kkhetre uporer line e cart er jaygay props likhte hobe
     //console.log(cart)
     let total = 0;

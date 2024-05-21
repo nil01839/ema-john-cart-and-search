@@ -3,11 +3,14 @@ import './Shop.css'
 import Products from '../Products/Products';
 import Cart from '../Cart/Cart';
 import { addToDb, getShoppingCart } from '../../utilities/fakedb';
+import { useLoaderData } from 'react-router-dom';
 
 const Shop = () => {
-    const [products, setProducts] = useState([]);//Jehetu data gulo array of objects akare ache, tai initial value hocche empty array
+  const products = useLoaderData();
+
+    //const [products, setProducts] = useState([]);//Jehetu data gulo array of objects akare ache, tai initial value hocche empty array
     const [cart, setCart] = useState([]);
-    
+    /* N.B- Reacr Router - er Loader use korar jonno nic er useEffect and uporer State ta comment kora holo
     useEffect(()=>{
         // console.log('Product load before fetch#1')
         fetch('products.json')
@@ -17,6 +20,8 @@ const Shop = () => {
             // console.log('Product Data Stored#4');
         })
     },[])
+    */
+    //console.log(products);
 
     useEffect(()=>{
         const storedCart = getShoppingCart();
