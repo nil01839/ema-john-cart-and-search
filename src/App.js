@@ -5,6 +5,7 @@ import About from './component/About/About';
 import Shop from './component/Shop/Shop';
 import Orders from './component/Orders/Orders';
 import Inventory from './component/Inventory/Inventory';
+import { productsAndCartLoader } from './loaders/productsAndCartLoader';
 
 
 function App() {
@@ -22,9 +23,7 @@ function App() {
         },
         {
           path: '/orders',
-          loader: () => {
-            return fetch('products.json')
-          },
+          loader: productsAndCartLoader, //eikhane ki finction call kora lagbe na(). jodi na lage, tahole eita ki?
           element: <Orders></Orders>
         },
         {
